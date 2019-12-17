@@ -1,0 +1,53 @@
+<html>
+<head>
+	<title>Silly Sentences for You</title>
+</head>
+<body>
+<div id="container">
+	<button type="button" onclick="location.reload()">Give me a new one!</button>
+	<div id="results"></div>
+</div>
+
+</body>
+
+<script src="words.js"></script>
+<script type="text/javascript">
+function getWords(useUnsafeWords, safeWords, unsafeWords){
+	if (useUnsafeWords) {
+		return safeWords.concat(unsafeWords);
+	}
+	else {
+		return safeWords;
+	}
+}
+
+function getRandomWord(useUnsafeWords, safeWords, unsafeWords) {
+	const allWords = getWords(useUnsafeWords, safeWords, unsafeWords);
+	
+	const word = allWords[Math.floor(Math.random() * allWords.length)];
+	
+	return word;
+}
+
+function assembleSentence(data) {
+	const jsonObject = JSON.parse(data);
+
+	const noun = getRandomWord(jsonObject.UseUnsafeWords, jsonObject.SafeNouns, jsonObject.UnsafeNouns);
+	const verb = getRandomWord(jsonObject.UseUnsafeWords, jsonObject.SafeVerbs, jsonObject.UnsafeVerbs);
+	const reminder = getRandomWord(jsonObject.UseUnsafeWords, jsonObject.UnsafeReminders, jsonObject.SafeReminders);
+	const endingPunctuation = getRandomWord(jsonObject.UseUnsafeWords, jsonObject.EndingPunctuation, new Array(0));
+	
+	const sentence = `${reminder} ${verb} ${noun}${endingPunctuation}`;
+	
+	console.log(sentence);
+	
+	return sentence;	
+}
+
+const sentence = assembleSentence(data);
+
+document.getElementById("results").innerHTML = `<h1>${sentence}</h1>`;
+
+</script>
+
+</html>
