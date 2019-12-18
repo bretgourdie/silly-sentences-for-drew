@@ -114,7 +114,7 @@
 		"the second-to-last 'Game of Thrones' episode",
 		"Gor-Don's Raspberry Pi",
 		"Gor-Don's copy of Bayonetta 2 in your Wii U",
-		"Werd, the opposite version of yourself"
+		"Werd, the opposite version of yourself",
 		"fear itself",
 		"pictures of boobs",
 		"doing the right thing",
@@ -212,9 +212,9 @@
 		"Kristen when she makes pizza",
 		"Kristen when she makes confections",
 		"Kristen when she makes breakfast",
-		"Kristen when she plays her Switch"
+		"Kristen when she plays her Switch",
 		"a big black dick",
-		"a dick so big and so black that not even light can escape its pull"
+		"a dick so big and so black that not even light can escape its pull",
 		"a completely average sized white dick",
 		"a lamprey swimming up the toilet and latching onto your taint",
 		"dem titties",
